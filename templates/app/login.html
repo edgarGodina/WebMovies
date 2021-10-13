@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{%  block title %} Login InfoMovies  {% endblock %}
+<body>
+    {% block content %}
+    <br>
+    <br>
+    <div id="loginForm" class="container container-sm">
+        <form  class="form-control border-dark border-3" method="get" action="#">
+            <h1>Login InfoMovies</h1>
+            <h3>Iniciar Sesion   </h3>
+            <label for="username">Id or Email</label><br>
+            <input class="bg-light" type="email" placeholder="Escribe aqui.." id="username" name="username"><br>
+
+            <label for="contraseña">Contraseña</label><br>
+            <input class="password-reset-link" placeholder="Escribe aqui.." type="password" id="contraseña" name="contraseña">
+            <br>
+            <button type="submit">Aceptar</button>
+        </form>
+    </div>
+
+
+    {% endblock %}
+</body>

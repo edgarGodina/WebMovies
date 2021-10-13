@@ -7,6 +7,10 @@ def indexView(request):
 
     return render(request,"app/index.html")
 
+def loginView(request):
+
+    return render(request,"app/login.html")
+
 
 
 
