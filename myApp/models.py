@@ -1,7 +1,7 @@
 from django.db import models
 import sys,os
 # Create your models here.
-class Usuario(models.Model):
+class Director(models.Model):
     """
         Clase Usuario que llevara consigo guardado = { id,email,nombre,apellidos,fecha de nacimiento , fecha de registro, password}
 
@@ -15,3 +15,12 @@ class Usuario(models.Model):
     password = models.CharField(max_length=30)
 
 
+class Peliculas(models.Model):
+    """
+        Clase de peliculas que llevara consigo guardado {idpelicula,Nombrepelicula,año de filmacion,director(usuario),casaproductora,valorfilmacion}
+    """
+    idPelicula = models.BigAutoField(primary_key = True)
+    idDirector = models.ForeignKey(Director,on_delete=models.CASCADE)
+    nombreDePelicula = models.CharField(max_length=50)
+    año = models.DateTimeField()
+    casaProductora = models.CharField(max_length=60)

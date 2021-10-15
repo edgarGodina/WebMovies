@@ -59,7 +59,7 @@
     -->
 </head>
 <body>
-<header>
+
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" ARIA-DISABLED="true" href="{% url 'myApp:index' %}">InfoMovies</a>
@@ -69,7 +69,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Peliculas</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'myApp:peliculas' %}">Peliculas</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Series</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" tabindex="-1">Personas</a>
@@ -85,12 +85,15 @@
             </div>
         </div>
     </nav>
-</header>
+
 {% block content %}
     <!---------------Contenido de cada pagina independiente-->
     <h1>edgar godina</h1>
 
 {% endblock %}
+    <br>
+    <br>
+    <br>
   <!-- FOOTER -->
     <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>

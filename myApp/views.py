@@ -11,6 +11,10 @@ def loginView(request):
 
     return render(request,"app/login.html")
 
+def peliculasView(request):
+
+    return render(request,"app/peliculas.html")
+
 
 
 
